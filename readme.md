@@ -68,6 +68,10 @@ fi
 brew bundle
 ```
 
+# iTerm 2
+
+Many visual and quality-of-life changes. Color theme: https://github.com/sindresorhus/iterm2-snazzy.
+
 ### License
 
 MIT
