@@ -55,6 +55,10 @@ See https://kb.iu.edu/d/acdd.
 
 Configured so that sudo is not required during `npm install`.
 
+## Vim
+
+Although I don't use Vim as my editor of choice, I like to have it configured according to my needs. The config is somewhat inspired by https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim.
+
 ## Homebrew
 
 Install Homebrew if it doesn't exist. Then, install the dependencies listed in the `Brewfile`:
