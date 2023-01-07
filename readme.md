@@ -47,6 +47,10 @@ XadillaX.viml
 
 Only small visual changes.
 
+## Git
+
+Small tweaks, including commit signing.
+
 ## .hushlogin
 
 See https://kb.iu.edu/d/acdd.
