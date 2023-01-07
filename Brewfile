@@ -1,24 +1,25 @@
-tap 'earthly/earthly' || true
-tap 'heroku/brew' || true
-tap 'planetscale/tap' || true
+tap 'earthly/earthly'
+tap 'heroku/brew'
+tap 'planetscale/tap'
 
 brew 'awscli'
-brew 'earthly'
+brew 'bat'
+brew 'cloudflare-wrangler'
 brew 'git'
 brew 'gnupg'
-brew 'go'
-brew 'heroku'
 brew 'n'
 brew 'neofetch'
 brew 'pinentry-mac'
-brew 'postgresql@15'
-brew 'pscale'
 brew 'pnpm'
 brew 'poetry'
+brew 'postgresql@15'
 brew 'pure'
 brew 'pyenv'
 brew 'zsh'
 brew 'zsh-syntax-highlighting'
+brew 'earthly'
+brew 'heroku'
+brew 'pscale'
 
 cask '1password'
 cask '1password-cli'

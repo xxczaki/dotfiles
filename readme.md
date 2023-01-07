@@ -68,6 +68,8 @@ fi
 brew bundle
 ```
 
+> Tip: use `brew bundle dump --file -` to get (*roughly*) the `Brewfile`
+
 # iTerm 2
 
 Many visual and quality-of-life changes. Color theme: https://github.com/sindresorhus/iterm2-snazzy.
