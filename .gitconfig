@@ -10,3 +10,6 @@
 	program = gpg
 [pull]
 	rebase = false
+[rerere]
+	enabled = true
+	autoupdate = true
