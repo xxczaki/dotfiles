@@ -1,0 +1,15 @@
+[user]
+	name = Antoni Kępiński
+	email = antoni@kepinski.ch
+	signingKey = 6BCF2980
+[credential]
+  helper = osxkeychain
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[pull]
+	rebase = false
+[rerere]
+	enabled = true
+	autoupdate = true
