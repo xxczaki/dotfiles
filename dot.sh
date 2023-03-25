@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euox pipefail
+set -euo pipefail
 IFS=$'\n\t'
 
 SCRIPT_PATH="$(readlink -f $0)"
