@@ -57,7 +57,7 @@ if [[ "$1" == 'sync' ]]; then
 	touch .hushlogin
 
 	# Finally, copy the `dot.sh` script itself
-	cp $SCRIPT_PATH $DIRECTORY
+	cp $SCRIPT_PATH $DIRECTORY/dot.sh
 
 	cd $DIRECTORY
 
