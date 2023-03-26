@@ -39,36 +39,13 @@ The config is extended to use 1Password's SSH integration.
 
 > **Note**
 >
-> This can be handled automatically by using Settings Sync.
+> VS Code remembers these via Settings Sync.
 
-List of installed extensions:
-
-```bash
-$ code --list-extensions
-
-1Password.op-vscode
-aaron-bond.better-comments
-atomiks.moonlight
-bradlc.vscode-tailwindcss
-BriteSnow.vscode-toggle-quotes
-dbaeumer.vscode-eslint
-GraphQL.vscode-graphql
-GraphQL.vscode-graphql-syntax
-kisstkondoros.vscode-gutter-preview
-mikestead.dotenv
-ms-vsliveshare.vsliveshare
-natqe.reload
-PKief.material-icon-theme
-Prisma.prisma
-ritwickdey.LiveServer
-styled-components.vscode-styled-components
-waderyan.gitblame
-XadillaX.viml
-```
+Settings and a list of installed extensions are included.
 
 ### Neofetch
 
-Only small visual changes.
+Only some small visual changes.
 
 ### Git
 
@@ -98,8 +75,6 @@ fi
 
 brew bundle
 ```
-
-> Tip: use `brew bundle dump --file -` to get (*roughly*) the `Brewfile`
 
 ### iTerm 2
 
