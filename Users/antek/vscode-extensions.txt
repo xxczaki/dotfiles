@@ -18,3 +18,4 @@ styled-components.vscode-styled-components
 waderyan.gitblame
 william-voyek.vscode-nginx
 XadillaX.viml
+yoavbls.pretty-ts-errors
