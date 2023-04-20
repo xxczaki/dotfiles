@@ -34,7 +34,7 @@ if [[ "$1" == 'sync' ]]; then
 	cd $DIRECTORY
 
 	git fetch --all
-	git pull
+	git pull --rebase
 
 	for file in ${TO_SYNC[@]}; do
 		# Alternative: `gcp --parents` (requires `brew install coreutils`).
