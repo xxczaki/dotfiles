@@ -46,3 +46,17 @@ alias cat='bat --paging=never'
 FZF_CTRL_T_OPTS="
   --preview 'bat -n --color=always {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+
+# pnpm
+export PNPM_HOME="/Users/antek/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+# Terraform
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# ngrok
+if command -v ngrok &>/dev/null; then
+  eval "$(ngrok completion)"
+fi

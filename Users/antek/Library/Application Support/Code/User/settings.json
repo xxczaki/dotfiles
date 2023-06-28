@@ -42,5 +42,6 @@
   "explorer.compactFolders": false,
   "haskell.manageHLS": "GHCup",
   "git.allowNoVerifyCommit": true,
-  "git.confirmNoVerifyCommit": false
+  "git.confirmNoVerifyCommit": false,
+  "workbench.localHistory.maxFileSize": 1024
 }
