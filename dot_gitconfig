@@ -1,0 +1,19 @@
+[user]
+	name = Antoni Kępiński
+	email = 22645979+xxczaki@users.noreply.github.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFkLZzVF/KjCgHwA0VMxlN2KgyU6t00VdooCYFUlAhV+
+[credential]
+	helper = osxkeychain
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[pull]
+	rebase = false
+[rerere]
+	enabled = true
+	autoupdate = true
+[init]
+	defaultBranch = main

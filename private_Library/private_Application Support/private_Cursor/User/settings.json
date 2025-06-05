@@ -1,0 +1,83 @@
+{
+    "editor.fontFamily": "IBM Plex Mono",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.lineHeight": 30,
+    "editor.formatOnPaste": true,
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.accessibilitySupport": "off",
+    "workbench.colorTheme": "Moonlight II",
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "javascript.format.semicolons": "insert",
+    "eslint.format.enable": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "eslint.quiet": true,
+    "editor.linkedEditing": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "git.confirmSync": false,
+    "editor.inlineSuggest.enabled": true,
+    "terminal.integrated.scrollback": 2500,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "files.autoSave": "afterDelay",
+    "editor.tabSize": 2,
+    "js/ts.implicitProjectConfig.checkJs": true,
+    "js/ts.implicitProjectConfig.experimentalDecorators": true,
+    "editor.tabCompletion": "on",
+    "search.quickOpen.includeSymbols": true,
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "git.allowNoVerifyCommit": true,
+    "git.confirmNoVerifyCommit": false,
+    "workbench.localHistory.maxFileSize": 1024,
+    "editor.stickyScroll.enabled": true,
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "workbench.editor.empty.hint": "hidden",
+    "extensions.ignoreRecommendations": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "files.associations": {
+        ".env*": "dotenv"
+    },
+    "files.watcherExclude": {
+        "**/node_modules/**": true,
+        "**/dist/**": true,
+        "**/out/**": true,
+        "**/.git/**": true
+    },
+    "dotenv.enableAutocloaking": false,
+    "terminal.external.osxExec": "Ghostty.app",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.enableImages": true,
+    "terminal.integrated.tabs.showActions": "always",
+    "terminal.integrated.tabs.showActiveTerminal": "always",
+    "chat.commandCenter.enabled": false,
+    "explorer.compactFolders": false,
+    "workbench.colorCustomizations": {
+        "sideBarTitle.foreground": "#00000000"
+    },
+    "vs-kubernetes": {
+        "vs-kubernetes.crd-code-completion": "enabled"
+    },
+    "terminal.integrated.tabs.enabled": false,
+    "diffEditor.renderSideBySide": false,
+    "scm.compactFolders": false,
+    "cursor.cpp.disabledLanguages": [
+        "plaintext",
+        "markdown",
+        "scminput"
+    ],
+    "biome.suggestInstallingGlobally": false,
+    "workbench.activityBar.orientation": "vertical",
+    "workbench.activityBar.location": "top",
+    "window.commandCenter": true,
+    "editor.minimap.enabled": true
+}

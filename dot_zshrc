@@ -1,0 +1,55 @@
+# Initialize completions
+autoload -Uz compinit; compinit
+
+# Initialize prompt
+autoload -U promptinit; promptinit
+
+# Use the "Pure" prompt
+prompt pure
+
+# Initialize zsh plugins
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Disable Homebrew hints
+export HOMEBREW_NO_ENV_HINTS=1
+
+# Change the symbol used in the "Pure" prompt
+PURE_PROMPT_SYMBOL="◭"
+
+# Modifications to PATH, MANPATH, etc.
+path+=(
+  "$HOME/.npm-packages/bin"
+  "$HOME/Library/pnpm"
+  "$HOME/.pyenv/bin"
+  "$HOME/.poetry/bin"
+  "/opt/homebrew/opt/postgresql@15/bin"
+  "$ANDROID_HOME/emulator"
+  "$ANDROID_HOME/platform-tools"
+)
+manpath+="$HOME/.npm-packages/share/man"
+
+# Pyenv
+eval "$(pyenv init -)"
+
+# Aliases
+alias cat='bat --paging=never'
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+FZF_CTRL_T_OPTS="
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+source ~/completion-for-pnpm.sh # autocomplete
+
+# fnm
+eval "$(fnm env --use-on-cd)"
+
+# Azul Zulu (OpenJDK)
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+
+# Android Studio
+export ANDROID_HOME=$HOME/Library/Android/sdk
