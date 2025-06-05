@@ -22,4 +22,3 @@ completion-for-pnpm.sh
 {{ if eq .chezmoi.os "windows" -}}
 .zshrc
 {{- end }}
-
