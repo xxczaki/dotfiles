@@ -1,0 +1,6 @@
+.DS_Store
+
+# Prepend with a `/` to specify a specific path relative to $HOME.
+
+# Migrate to XDG directories
+/.npmrc

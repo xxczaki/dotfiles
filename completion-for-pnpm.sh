@@ -25,4 +25,3 @@ if type compdef &>/dev/null; then
   fi
 fi
 ###-end-pnpm-completion-###
-

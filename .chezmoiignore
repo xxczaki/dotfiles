@@ -1,3 +1,25 @@
+.DS_Store
 readme.md
 license
+
+{{ if not (lookPath "ghostty") }}
+.config/ghostty
+{{ end }}
+
+{{- if ne .chezmoi.os "darwin" }}
+.ssh/config
+Library/Application Support/Cursor
+{{- end }}
+
+{{ if eq .chezmoi.os "windows" -}}
+completion-for-pnpm.sh
+{{- end }}
+
+{{- if not (lookPath "npm") -}}
+.config/npm
+{{ end }}
+
+{{ if eq .chezmoi.os "windows" -}}
+.zshrc
+{{- end }}
 
