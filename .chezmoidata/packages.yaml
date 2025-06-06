@@ -8,7 +8,6 @@ packages:
     - 'build-essential'
     - 'jq'
     - 'bat'
-    - 'fzf'
   darwin:
     taps:
     - 'norwoodj/tap'
