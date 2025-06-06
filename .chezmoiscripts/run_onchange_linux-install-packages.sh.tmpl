@@ -8,7 +8,7 @@ sudo apt install -y {{ . }}
 {{ end -}}
 
 if [ "$SHELL" != "$(which zsh)" ]; then
-    chsh -s $(which zsh)
+    sudo chsh -s $(which zsh)
 fi
 
 if ! command -v fnm &> /dev/null; then
