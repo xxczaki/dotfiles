@@ -15,14 +15,6 @@ prompt pure
 PURE_PROMPT_SYMBOL="◭"
 
 {{ if eq .chezmoi.os "darwin" -}}
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-{{ end -}}
-
-{{ if eq .chezmoi.os "linux" -}}
-source "$HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-{{ end -}}
-
-{{ if eq .chezmoi.os "darwin" -}}
 # Disable Homebrew hints
 export HOMEBREW_NO_ENV_HINTS=1
 {{ end -}}
@@ -54,9 +46,9 @@ eval "$(pyenv init -)"
 
 # Aliases
 {{ if eq .chezmoi.os "linux" -}}
-alias bat='batcat'
+alias bat="batcat"
 {{ end -}}
-alias cat='bat --paging=never'
+alias cat="bat --paging=never"
 
 # fzf
 source <(fzf --zsh)
@@ -76,4 +68,12 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
 # Android Studio
 export ANDROID_HOME=$HOME/Library/Android/sdk
+{{ end -}}
+
+{{ if eq .chezmoi.os "darwin" -}}
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+{{ end -}}
+
+{{ if eq .chezmoi.os "linux" -}}
+source "$HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 {{ end -}}
