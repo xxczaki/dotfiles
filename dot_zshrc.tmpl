@@ -4,6 +4,10 @@ autoload -Uz compinit; compinit
 # Initialize prompt
 autoload -U promptinit; promptinit
 
+{{ if eq .chezmoi.os "linux" -}}
+fpath+=($HOME/.pure)
+{{ end -}}
+
 # Use the "Pure" prompt
 prompt pure
 
@@ -37,6 +41,7 @@ path+=(
 {{ if eq .chezmoi.os "linux" -}}
   "$HOME/.local/bin"
   "$HOME/.local/share/pnpm"
+	"$HOME/.local/share/fnm"
 {{ end -}}
 )
 manpath+="$HOME/.npm-packages/share/man"
