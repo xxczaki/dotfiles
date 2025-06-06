@@ -1,4 +1,14 @@
 packages:
+  linux:
+    apt:
+    - 'git'
+    - 'vim'
+    - 'zsh'
+    - 'curl'
+    - 'build-essential'
+    - 'jq'
+    - 'bat'
+    - 'fzf'
   darwin:
     taps:
     - 'norwoodj/tap'

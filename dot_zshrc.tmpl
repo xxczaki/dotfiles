@@ -7,59 +7,67 @@ autoload -U promptinit; promptinit
 # Use the "Pure" prompt
 prompt pure
 
-{{ if eq .chezmoi.os "darwin" -}}
-# Initialize zsh plugins (macOS/Homebrew)
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Change the symbol used in the "Pure" prompt
+PURE_PROMPT_SYMBOL="◭"
 
+{{ if eq .chezmoi.os "darwin" -}}
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+{{ end -}}
+
+{{ if eq .chezmoi.os "linux" -}}
+source "$HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+{{ end -}}
+
+{{ if eq .chezmoi.os "darwin" -}}
 # Disable Homebrew hints
 export HOMEBREW_NO_ENV_HINTS=1
 {{ end -}}
-
-# Change the symbol used in the "Pure" prompt
-PURE_PROMPT_SYMBOL="◭"
 
 # Modifications to PATH, MANPATH, etc.
 path+=(
   "$HOME/.npm-packages/bin"
 {{ if eq .chezmoi.os "darwin" -}}
   "$HOME/Library/pnpm"
-{{ end -}}
-  "$HOME/.pyenv/bin"
+	"$HOME/.pyenv/bin"
   "$HOME/.poetry/bin"
-{{ if eq .chezmoi.os "darwin" -}}
   "/opt/homebrew/opt/postgresql@17/bin"
-{{ end -}}
-  "$ANDROID_HOME/emulator"
+	"$ANDROID_HOME/emulator"
   "$ANDROID_HOME/platform-tools"
+{{ end -}}
+{{ if eq .chezmoi.os "linux" -}}
+  "$HOME/.local/bin"
+  "$HOME/.local/share/pnpm"
+{{ end -}}
 )
 manpath+="$HOME/.npm-packages/share/man"
 
+{{ if eq .chezmoi.os "darwin" -}}
 # Pyenv
 eval "$(pyenv init -)"
+{{ end -}}
 
 # Aliases
+{{ if eq .chezmoi.os "linux" -}}
+alias bat='batcat'
+{{ end -}}
 alias cat='bat --paging=never'
 
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 FZF_CTRL_T_OPTS="
   --preview 'bat -n --color=always {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
-# pnpm
-source ~/completion-for-pnpm.sh # autocomplete
-{{ if eq .chezmoi.os "darwin" -}}
-export PNPM_HOME="$HOME/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-{{ end -}}
+# pnpm autocomplete
+source ~/completion-for-pnpm.sh
 
 # fnm
-eval "$(fnm env --use-on-cd)"
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 {{ if eq .chezmoi.os "darwin" -}}
-# Azul Zulu (OpenJDK) - macOS
+# Azul Zulu (OpenJDK)
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
-# Android Studio - macOS
+# Android Studio
 export ANDROID_HOME=$HOME/Library/Android/sdk
 {{ end -}}

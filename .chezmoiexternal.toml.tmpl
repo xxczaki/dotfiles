@@ -1,0 +1,11 @@
+{{ if eq .chezmoi.os "linux" -}}
+[".pure"]
+    type = "git-repo"
+    url = "https://github.com/sindresorhus/pure.git"
+    refreshPeriod = "168h"
+
+[".zsh-syntax-highlighting"]
+    type = "git-repo"
+    url = "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+    refreshPeriod = "168h"
+{{ end -}} 
