@@ -56,8 +56,9 @@ FZF_CTRL_T_OPTS="
   --preview 'bat -n --color=always {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
-# pnpm autocomplete
-source ~/completion-for-pnpm.sh
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+source ~/completion-for-pnpm.sh # autocomplete
 
 # fnm
 eval "$(fnm env --use-on-cd --shell zsh)"
