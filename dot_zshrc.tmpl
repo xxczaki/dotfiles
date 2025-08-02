@@ -4,9 +4,7 @@ autoload -Uz compinit; compinit
 # Initialize prompt
 autoload -U promptinit; promptinit
 
-{{ if eq .chezmoi.os "linux" -}}
 fpath+=($HOME/.pure)
-{{ end -}}
 
 # Use the "Pure" prompt
 prompt pure
@@ -14,40 +12,18 @@ prompt pure
 # Change the symbol used in the "Pure" prompt
 PURE_PROMPT_SYMBOL="◭"
 
-{{ if eq .chezmoi.os "darwin" -}}
-# Disable Homebrew hints
-export HOMEBREW_NO_ENV_HINTS=1
-{{ end -}}
-
 # Modifications to PATH, MANPATH, etc.
 path+=(
   "$HOME/.npm-packages/bin"
-{{ if eq .chezmoi.os "darwin" -}}
-  "$HOME/Library/pnpm"
-	"$HOME/.pyenv/bin"
-  "$HOME/.poetry/bin"
-  "/opt/homebrew/opt/postgresql@17/bin"
-	"$ANDROID_HOME/emulator"
-  "$ANDROID_HOME/platform-tools"
-{{ end -}}
-{{ if eq .chezmoi.os "linux" -}}
   "$HOME/.local/bin"
   "$HOME/.local/share/pnpm"
 	"$HOME/.local/share/fnm"
   "$HOME/.fzf/bin"
-{{ end -}}
 )
 manpath+="$HOME/.npm-packages/share/man"
 
-{{ if eq .chezmoi.os "darwin" -}}
-# Pyenv
-eval "$(pyenv init -)"
-{{ end -}}
-
 # Aliases
-{{ if eq .chezmoi.os "linux" -}}
 alias bat="batcat"
-{{ end -}}
 alias cat="bat --paging=never"
 
 # fzf
@@ -63,21 +39,4 @@ source ~/completion-for-pnpm.sh # autocomplete
 # fnm
 eval "$(fnm env --use-on-cd --shell zsh)"
 
-{{ if eq .chezmoi.os "darwin" -}}
-# Azul Zulu (OpenJDK)
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
-
-# Android Studio
-export ANDROID_HOME=$HOME/Library/Android/sdk
-{{ end -}}
-
-{{ if eq .chezmoi.os "darwin" -}}
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-{{ end -}}
-
-{{ if eq .chezmoi.os "linux" -}}
 source "$HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-{{ end -}}
-
-# Claude Code
-alias claude="$HOME/.claude/local/claude"

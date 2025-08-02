@@ -1,0 +1,13 @@
+set --universal pure_symbol_prompt ◭
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+fnm env --use-on-cd --version-file-strategy recursive | source
+
+{{- if (joinPath .chezmoi.homeDir ".orbstack/ssh/config" | lstat) -}}
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+{{- end }}
+
+# Aliases
+alias bat="batcat"
+alias cat="bat --paging=never"
