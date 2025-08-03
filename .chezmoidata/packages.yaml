@@ -69,8 +69,6 @@ packages:
     - 'expo.vscode-expo-tools'
     - 'github.vscode-github-actions'
     - 'github.vscode-pull-request-github'
-    - 'graphql.vscode-graphql'
-    - 'graphql.vscode-graphql-syntax'
     - 'gruntfuggly.todo-tree'
     - 'kisstkondoros.vscode-gutter-preview'
     - 'mikestead.dotenv'
@@ -82,5 +80,3 @@ packages:
     - 'tamasfe.even-better-toml'
     - 'unifiedjs.vscode-mdx'
     - 'yoavbls.pretty-ts-errors'
-    plugins:
-    - 'pure-fish/pure'
