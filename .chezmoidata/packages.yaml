@@ -16,6 +16,7 @@ packages:
     - 'autoconf'
     - 'automake'
     - 'bat'
+    - 'biome'
     - 'chezmoi'
     - 'cilium-cli'
     - 'cocoapods'

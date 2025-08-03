@@ -1,0 +1,10 @@
+{
+    "window.commandCenter": true,
+    "workbench.colorTheme": "Moonlight II",
+    "git.autofetch": true,
+    "security.promptForLocalFileProtocolHandling": false,
+    "files.autoSave": "afterDelay",
+    "redhat.telemetry.enabled": false,
+    "git.confirmSync": false
+  }
+  
