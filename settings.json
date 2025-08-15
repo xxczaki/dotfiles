@@ -1,0 +1,15 @@
+{
+  "window.commandCenter": true,
+  "workbench.colorTheme": "Moonlight II",
+  "git.autofetch": true,
+  "security.promptForLocalFileProtocolHandling": false,
+  "redhat.telemetry.enabled": false,
+  "git.confirmSync": false,
+  "githubPullRequests.pullBranch": "never",
+  "cursor.composer.usageSummaryDisplay": "always",
+  "git.enableSmartCommit": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.formatOnSave": true,
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false
+}

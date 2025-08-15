@@ -1,6 +1,7 @@
 .DS_Store
 readme.md
 license
+settings.json
 
 {{ if not (lookPath "ghostty") }}
 .config/ghostty
@@ -8,21 +9,15 @@ license
 
 {{- if ne .chezmoi.os "darwin" }}
 .ssh/config
-Library/Application Support/Cursor
+.config/fish
+Library/Application Support/Cursor/User/settings.json
 {{- end }}
 
 {{- if ne .chezmoi.os "linux" }}
 completion-for-pnpm.sh
+.zshrc
 {{- end }}
 
 {{- if not (lookPath "npm") -}}
 .config/npm
 {{ end }}
-
-{{- if ne .chezmoi.os "linux" }}
-.zshrc
-{{- end }}
-
-{{- if ne .chezmoi.os "darwin" }}
-.config/fish
-{{- end }}
