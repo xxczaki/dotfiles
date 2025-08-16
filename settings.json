@@ -11,5 +11,21 @@
   "workbench.iconTheme": "material-icon-theme",
   "editor.formatOnSave": true,
   "explorer.compactFolders": false,
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+  "cursor.composer.queueMessageDefaultBehavior": "stop-and-send",
+  "editor.accessibilitySupport": "off",
+  "editor.experimentalGpuAcceleration": "on",
+  "editor.folding": false,
+  "editor.linkedEditing": true,
+  "editor.roundedSelection": false,
+  "editor.formatOnPaste": true,
+  "editor.minimap.enabled": true,
+  "workbench.enableExperiments": false,
+  "workbench.tips.enabled": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmPasteNative": false,
+  "scm.compactFolders": false,
+  "scm.defaultViewMode": "tree",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontLigatures.enabled": true
 }
