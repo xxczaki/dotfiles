@@ -3,14 +3,11 @@ readme.md
 license
 settings.json
 
-{{ if not (lookPath "ghostty") }}
-.config/ghostty
-{{ end }}
-
 {{- if ne .chezmoi.os "darwin" }}
 .ssh/config
 .config/fish
 Library/Application Support/Cursor/User/settings.json
+Library/Application Support/com.mitchellh.ghostty/config
 {{- end }}
 
 {{- if ne .chezmoi.os "linux" }}
