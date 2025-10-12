@@ -58,7 +58,6 @@ packages:
     - 'tableplus'
     - 'tailscale-app'
     extensions:
-    - 'anthropic.claude-code'
     - 'astro-build.astro-vscode'
     - 'atomiks.moonlight'
     - 'biomejs.biome'
@@ -78,4 +77,5 @@ packages:
     - 'styled-components.vscode-styled-components'
     - 'tamasfe.even-better-toml'
     - 'unifiedjs.vscode-mdx'
+    - 'vscodevim.vim'
     - 'yoavbls.pretty-ts-errors'
