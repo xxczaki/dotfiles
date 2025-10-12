@@ -27,5 +27,12 @@
   "scm.defaultViewMode": "tree",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontLigatures.enabled": true,
-  "json.schemaDownload.enable": true
+  "json.schemaDownload.enable": true,
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "editor.fontFamily": "'IBM Plex Mono'"
 }
