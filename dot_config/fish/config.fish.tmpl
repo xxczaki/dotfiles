@@ -2,6 +2,8 @@ set --universal pure_symbol_prompt ◭
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+set -gx NPM_CONFIG_USERCONFIG "$HOME/.config/npm/.npmrc"
+
 {{- if (joinPath .chezmoi.homeDir ".orbstack/ssh/config" | lstat) -}}
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 {{- end }}
