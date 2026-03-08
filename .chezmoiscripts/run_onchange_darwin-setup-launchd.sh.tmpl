@@ -1,5 +1,5 @@
 {{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
-launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.chezmoi.re-add.plist 2>/dev/null || true
-launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.chezmoi.re-add.plist
+launchctl unload ~/Library/LaunchAgents/com.chezmoi.re-add.plist 2>/dev/null || true
+launchctl load ~/Library/LaunchAgents/com.chezmoi.re-add.plist 2>/dev/null || echo "launchctl load failed — run manually: launchctl load ~/Library/LaunchAgents/com.chezmoi.re-add.plist"
 {{ end -}}
