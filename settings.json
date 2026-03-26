@@ -6,7 +6,7 @@
   "redhat.telemetry.enabled": false,
   "git.confirmSync": false,
   "githubPullRequests.pullBranch": "never",
-  "cursor.composer.usageSummaryDisplay": "always",
+  "cursor.composer.usageSummaryDisplay": "never",
   "git.enableSmartCommit": true,
   "workbench.iconTheme": "material-icon-theme",
   "editor.formatOnSave": true,
@@ -29,7 +29,7 @@
   "terminal.integrated.fontLigatures.enabled": true,
   "json.schemaDownload.enable": true,
   "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
-  "editor.fontFamily": "'IBM Plex Mono'"
+  "editor.fontFamily": "'IBM Plex Mono'",
 }
