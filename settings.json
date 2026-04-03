@@ -32,4 +32,5 @@
     "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "editor.fontFamily": "'IBM Plex Mono'",
+  "typescript.experimental.useTsgo": true,
 }
