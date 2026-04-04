@@ -8,5 +8,8 @@ set -gx NPM_CONFIG_USERCONFIG "$HOME/.config/npm/.npmrc"
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 {{ end -}}
 
+# mise
+mise activate fish | source
+
 # Aliases
 alias cat='bat --paging=never'

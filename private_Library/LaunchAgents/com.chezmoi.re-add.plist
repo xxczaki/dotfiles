@@ -10,13 +10,8 @@
         <string>/opt/homebrew/bin/chezmoi</string>
         <string>re-add</string>
     </array>
-    <key>StartCalendarInterval</key>
-    <dict>
-        <key>Hour</key>
-        <integer>12</integer>
-        <key>Minute</key>
-        <integer>0</integer>
-    </dict>
+    <key>StartInterval</key>
+    <integer>14400</integer>
     <key>StandardOutPath</key>
     <string>/tmp/chezmoi-re-add.log</string>
     <key>StandardErrorPath</key>

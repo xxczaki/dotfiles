@@ -12,15 +12,11 @@ prompt pure
 # Change the symbol used in the "Pure" prompt
 PURE_PROMPT_SYMBOL="◭"
 
-# Modifications to PATH, MANPATH, etc.
+# Modifications to PATH
 path+=(
-  "$HOME/.npm-packages/bin"
   "$HOME/.local/bin"
-  "$HOME/.local/share/pnpm"
-	"$HOME/.local/share/fnm"
   "$HOME/.fzf/bin"
 )
-manpath+="$HOME/.npm-packages/share/man"
 
 # Aliases
 alias bat="batcat"
@@ -32,11 +28,7 @@ FZF_CTRL_T_OPTS="
   --preview 'bat -n --color=always {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-source ~/completion-for-pnpm.sh # autocomplete
-
-# fnm
-eval "$(fnm env --use-on-cd --shell zsh)"
+# mise
+eval "$(mise activate zsh)"
 
 source "$HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
