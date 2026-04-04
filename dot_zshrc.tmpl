@@ -1,10 +1,10 @@
 # Initialize completions
 autoload -Uz compinit; compinit
 
+fpath+=($HOME/.pure)
+
 # Initialize prompt
 autoload -U promptinit; promptinit
-
-fpath+=($HOME/.pure)
 
 # Use the "Pure" prompt
 prompt pure
@@ -23,7 +23,12 @@ alias bat="batcat"
 alias cat="bat --paging=never"
 
 # fzf
-source <(fzf --zsh)
+if fzf --zsh &> /dev/null; then
+  source <(fzf --zsh)
+elif [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]; then
+  source /usr/share/doc/fzf/examples/key-bindings.zsh
+  source /usr/share/doc/fzf/examples/completion.zsh
+fi
 FZF_CTRL_T_OPTS="
   --preview 'bat -n --color=always {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
