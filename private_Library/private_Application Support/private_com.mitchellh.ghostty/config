@@ -2,3 +2,5 @@ confirm-close-surface = false
 theme = Snazzy Soft
 cursor-style = bar
 keybind = shift+enter=text:\n
+shell-integration = fish
+cursor-click-to-move = true
