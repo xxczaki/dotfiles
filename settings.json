@@ -34,4 +34,5 @@
   "editor.fontFamily": "'IBM Plex Mono'",
   "typescript.experimental.useTsgo": true,
   "git.replaceTagsWhenPull": true,
+  "claudeCode.preferredLocation": "panel",
 }
