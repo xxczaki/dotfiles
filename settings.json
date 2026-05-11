@@ -35,4 +35,5 @@
   "typescript.experimental.useTsgo": true,
   "git.replaceTagsWhenPull": true,
   "claudeCode.preferredLocation": "panel",
+  "window.autoDetectColorScheme": false,
 }
