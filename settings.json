@@ -36,4 +36,5 @@
   "git.replaceTagsWhenPull": true,
   "claudeCode.preferredLocation": "panel",
   "window.autoDetectColorScheme": false,
+  "workbench.activityBar.orientation": "vertical",
 }
