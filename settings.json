@@ -37,4 +37,5 @@
   "claudeCode.preferredLocation": "panel",
   "window.autoDetectColorScheme": false,
   "workbench.activityBar.orientation": "vertical",
+  "workbench.agentsWindowButton.enabled": false,
 }
