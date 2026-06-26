@@ -39,4 +39,5 @@
   "workbench.activityBar.orientation": "vertical",
   "workbench.agentsWindowButton.enabled": false,
   "vim.disableExtension": true,
+  "cursor.composer.showEmptyStateTips": false,
 }
