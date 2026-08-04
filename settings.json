@@ -41,4 +41,5 @@
   "vim.disableExtension": true,
   "cursor.composer.showEmptyStateTips": false,
   "cursor.worktreeMaxCount": 15,
+  "scm.alwaysShowRepositories": true,
 }
