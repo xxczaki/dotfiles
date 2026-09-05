@@ -34,6 +34,9 @@ vault = "Persönlich"
 account = "Parsify Technologies"
 
 [[ssh-keys]]
+item = "Home Assistant SSH"
+
+[[ssh-keys]]
 vault = "Employee"
 
 [[ssh-keys]]
