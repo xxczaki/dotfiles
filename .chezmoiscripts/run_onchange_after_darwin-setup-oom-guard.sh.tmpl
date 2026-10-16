@@ -1,0 +1,8 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+# Reload whenever the script or plist changes
+# script: {{ include "dot_local/bin/executable_oom-guard.sh" | sha256sum }}
+# plist: {{ include "private_Library/LaunchAgents/com.xxczaki.oom-guard.plist.tmpl" | sha256sum }}
+launchctl unload ~/Library/LaunchAgents/com.xxczaki.oom-guard.plist 2>/dev/null || true
+launchctl load ~/Library/LaunchAgents/com.xxczaki.oom-guard.plist
+{{ end -}}
