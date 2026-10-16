@@ -3,7 +3,7 @@
 # so a runaway process can't push macOS into a swap-exhaustion panic.
 THRESHOLD_MB=2048
 # Never kill these (top truncates names to ~16 chars)
-PROTECT='^(loginwindow|Finder|Dock|SystemUIServer|ControlCenter|Ghostty|Terminal|iTerm2|launchd)'
+PROTECT='^(loginwindow|Finder|Dock|SystemUIServer|ControlCenter|Terminal|launchd)'
 LOG="$HOME/Library/Logs/oom-guard.log"
 total_mb=$(( $(sysctl -n hw.memsize) / 1048576 ))
 
